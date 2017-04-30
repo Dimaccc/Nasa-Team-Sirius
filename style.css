@@ -1,0 +1,210 @@
+body {
+	width: 980px;
+	background: url('images/pozadina.jpg') no-repeat;
+	background-size: cover;
+	font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 18px;
+	margin: 0 auto;
+	color:black;
+}
+
+.logo img{
+	float:right;
+}
+
+ul.first {
+margin: 0px;
+padding: 0px;
+list-style: none;
+text-decoration:none;
+color:black;
+}
+
+
+
+ul.first li.first{
+/*float: left;*/
+padding:10px;
+
+display:inline;
+width:150px;
+height:40px;
+background-color: black;
+opacity: .8;
+line-height: 42px;
+text-align: center;
+font-size: 20px;
+color:black;
+}
+ul.first li.first a{
+	text-decoration:none;
+ color:white;
+}
+
+ul.first li.first:hover{
+background-color: #4CAF50;
+}
+.tree ul{
+	margin:0px !important;
+	padding-top:48px;
+	padding-bottom:48px;
+	
+}
+.sindzir{
+
+padding:0.5em;
+color:white;
+
+margin:0px;
+clear:left;}
+
+}
+
+
+.levo{
+	float:right;
+}
+.desno{
+	float:left;
+	font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 18px;
+	color: #4f8295;
+	max-width: 62.5rem;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: 410px
+	overflow:hidden;
+}
+
+
+/*Now the CSS*/
+* {margin: 0; padding: 0;}
+
+.tree ul {
+	padding-top: 20px; position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.tree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%; height: 20px;
+}
+.tree li::after{
+	right: auto; left: 50%;
+	border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0; height: 20px;
+}
+
+.tree li a{
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: black;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	background: #7FFF00;
+}
+H2{
+float: center;
+color:green;
+text-align: center;
+margin:13px;
+}
+
+.tree li a:hover, .tree li a:hover+ul li a {
+	background: green; color: #000; border: 1px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+	border-color:  #94a0b4;
+}
+
+.font{
+	font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+	font-size: 18px;
+	color: #4f8295;
+	max-width: 62.5rem;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.orel
+{padding:0.5em;
+color:white;
+background-position: center;
+margin:80px;
+clear:left;}
+
+#content {
+	background-color: #fff;
+	
+}
+
+
+.active {
+    background-color: green;
+}
